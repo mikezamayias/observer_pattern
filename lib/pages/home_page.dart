@@ -22,7 +22,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            fontFamily: 'Jura',
+          ),
+        ),
       ),
       body: Center(
         child: Column(
