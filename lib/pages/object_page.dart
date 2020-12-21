@@ -9,11 +9,13 @@ class ObjectPage extends StatelessWidget {
     @required this.objectName,
     @required this.objectColor,
     @required this.otherColor,
+    @required this.hasActiveButtons,
   }) : super(key: key);
 
   final String objectName;
   final Color objectColor;
   final Color otherColor;
+  final bool hasActiveButtons;
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +50,7 @@ class ObjectPage extends StatelessWidget {
               child: ButtonsFrame(
                 thisColor: objectColor,
                 thatColor: otherColor,
+                hasActiveButtons: hasActiveButtons,
               ),
             ),
           ],

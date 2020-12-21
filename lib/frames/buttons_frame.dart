@@ -6,10 +6,12 @@ class ButtonsFrame extends StatefulWidget {
     Key key,
     @required this.thisColor,
     @required this.thatColor,
+    @required this.hasActiveButtons,
   }) : super(key: key);
 
   final Color thisColor;
   final Color thatColor;
+  final bool hasActiveButtons;
 
   @override
   _ButtonsFrameState createState() => _ButtonsFrameState();
@@ -35,6 +37,7 @@ class _ButtonsFrameState extends State<ButtonsFrame> {
             index: '$index',
             thisColor: widget.thisColor,
             thatColor: widget.thatColor,
+            isPressable: widget.hasActiveButtons,
           ),
         )..shuffle(),
       ),

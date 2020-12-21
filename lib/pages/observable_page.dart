@@ -16,6 +16,7 @@ class _ObservablePageState extends State<ObservablePage> {
       objectName: 'Observable',
       objectColor: Colors.purple[200],
       otherColor: Colors.amber[400],
+      hasActiveButtons: true,
     );
   }
 }

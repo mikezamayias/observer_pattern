@@ -6,11 +6,13 @@ class CustomButton extends StatefulWidget {
     @required this.index,
     @required this.thisColor,
     @required this.thatColor,
+    @required this.isPressable,
   }) : super(key: key);
 
   final String index;
   final Color thisColor;
   final Color thatColor;
+  final bool isPressable;
 
   @override
   _CustomButtonState createState() => _CustomButtonState();
@@ -29,11 +31,13 @@ class _CustomButtonState extends State<CustomButton> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        setState(
-          () {
-            _color = !_color;
-          },
-        );
+        if (widget.isPressable) {
+          setState(
+            () {
+              _color = !_color;
+            },
+          );
+        }
       },
       child: Card(
         color: _color ? Colors.white : Colors.grey[800],
