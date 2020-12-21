@@ -14,16 +14,33 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo[200],
-      child: Row(
-        children: [
-          ObjectPage(
-            objectName: 'Observable',
-          ),
-          ObjectPage(
-            objectName: 'Observer',
-          ),
-        ],
+      margin: EdgeInsets.all(0),
+      color: Colors.grey[200],
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(
+              fit: FlexFit.loose,
+              child: ObjectPage(
+                objectName: 'Observable',
+                objectColor: Colors.purple[200],
+                otherColor: Colors.amber[400],
+              ),
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              child: ObjectPage(
+                objectName: 'Observer',
+                objectColor: Colors.amber[400],
+                otherColor: Colors.purple[200],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

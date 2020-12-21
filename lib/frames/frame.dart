@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:observer_pattern/widgets/custom_button.dart';
 
 class Frame extends StatelessWidget {
-  const Frame({Key key}) : super(key: key);
+  const Frame({
+    Key key,
+    @required this.thisColor,
+    @required this.thatColor,
+  }) : super(key: key);
+
+  final Color thisColor;
+  final Color thatColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +21,16 @@ class Frame extends StatelessWidget {
       child: GridView.count(
         crossAxisCount: 10,
         scrollDirection: Axis.vertical,
+        mainAxisSpacing: 7,
+        crossAxisSpacing: 7,
+        childAspectRatio: 1.1,
         children: List.generate(
           100,
-          (index) => CustomButton(index: '$index'),
+          (index) => CustomButton(
+            index: '$index',
+            thisColor: thisColor,
+            thatColor: thatColor,
+          ),
         ),
       ),
     );

@@ -4,9 +4,13 @@ class CustomButton extends StatefulWidget {
   const CustomButton({
     Key key,
     @required this.index,
+    @required this.thisColor,
+    @required this.thatColor,
   }) : super(key: key);
 
   final String index;
+  final Color thisColor;
+  final Color thatColor;
 
   @override
   _CustomButtonState createState() => _CustomButtonState();
@@ -32,7 +36,7 @@ class _CustomButtonState extends State<CustomButton> {
         );
       },
       child: Card(
-        color: _color ? Colors.white : Colors.pink[300],
+        color: _color ? Colors.white : Colors.grey[800],
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
@@ -42,7 +46,7 @@ class _CustomButtonState extends State<CustomButton> {
             '${widget.index}',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: _color ? Colors.black : Colors.white,
+              color: _color ? Colors.black : widget.thisColor,
               fontSize: 24,
             ),
           ),
