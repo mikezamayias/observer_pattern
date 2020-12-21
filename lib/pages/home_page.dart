@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:observer_pattern/pages/object_page.dart';
+import 'package:observer_pattern/pages/observable_page.dart';
+import 'package:observer_pattern/pages/observer_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -25,19 +27,11 @@ class _HomePageState extends State<HomePage> {
           children: [
             Flexible(
               fit: FlexFit.loose,
-              child: ObjectPage(
-                objectName: 'Observable',
-                objectColor: Colors.purple[200],
-                otherColor: Colors.amber[400],
-              ),
+              child: ObservablePage(),
             ),
             Flexible(
-              fit: FlexFit.tight,
-              child: ObjectPage(
-                objectName: 'Observer',
-                objectColor: Colors.amber[400],
-                otherColor: Colors.purple[200],
-              ),
+              fit: FlexFit.loose,
+              child: ObserverPage(),
             ),
           ],
         ),

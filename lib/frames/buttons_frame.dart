@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:observer_pattern/widgets/custom_button.dart';
 
-class Frame extends StatelessWidget {
-  const Frame({
+class ButtonsFrame extends StatelessWidget {
+  const ButtonsFrame({
     Key key,
     @required this.thisColor,
     @required this.thatColor,

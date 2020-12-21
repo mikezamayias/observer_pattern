@@ -1,36 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:observer_pattern/logic/observable_interface.dart';
+import 'package:observer_pattern/pages/object_page.dart';
 
-class ObservablePage extends StatelessWidget {
+class ObservablePage extends StatefulWidget implements Observable{
   const ObservablePage({Key key}) : super(key: key);
 
   @override
+  _ObservablePageState createState() => _ObservablePageState();
+
+  @override
+  notifyObserver() {
+    // TODO: implement notifyObserver
+    // throw UnimplementedError();
+  }
+
+  @override
+  registerObserver() {
+    // TODO: implement registerObserver
+    // throw UnimplementedError();
+  }
+
+  @override
+  removeObserver() {
+    // TODO: implement removeObserver
+    // throw UnimplementedError();
+  }
+}
+
+class _ObservablePageState extends State<ObservablePage> {
+  @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.amber,
-      elevation: 0,
-      shadowColor: Colors.transparent,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Card(
-            color: Colors.teal,
-            child: Text(
-              'Subject',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Card(
-            color: Colors.lime,
-          )
-        ],
-      ),
+    return ObjectPage(
+      objectName: 'Observable',
+      objectColor: Colors.purple[200],
+      otherColor: Colors.amber[400],
     );
   }
 }

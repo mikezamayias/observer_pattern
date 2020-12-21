@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:observer_pattern/frames/frame.dart';
+import 'package:observer_pattern/frames/buttons_frame.dart';
 import 'package:observer_pattern/widgets/object_text_panel.dart';
 
 class ObjectPage extends StatelessWidget {
@@ -45,7 +45,7 @@ class ObjectPage extends StatelessWidget {
             Flexible(
               flex: 10,
               fit: FlexFit.loose,
-              child: Frame(
+              child: ButtonsFrame(
                 thisColor: objectColor,
                 thatColor: otherColor,
               ),
