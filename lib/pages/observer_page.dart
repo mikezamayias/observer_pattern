@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:observer_pattern/logic/observer_interface.dart';
 import 'package:observer_pattern/pages/object_page.dart';
 
-class ObserverPage extends StatefulWidget {
+class ObserverPage extends StatefulWidget with Observer {
   ObserverPage({Key key}) : super(key: key);
 
   @override
