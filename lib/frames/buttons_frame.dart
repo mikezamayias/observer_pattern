@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:observer_pattern/widgets/custom_button.dart';
 
-class ButtonsFrame extends StatelessWidget {
+class ButtonsFrame extends StatefulWidget {
   const ButtonsFrame({
     Key key,
     @required this.thisColor,
@@ -11,6 +11,11 @@ class ButtonsFrame extends StatelessWidget {
   final Color thisColor;
   final Color thatColor;
 
+  @override
+  _ButtonsFrameState createState() => _ButtonsFrameState();
+}
+
+class _ButtonsFrameState extends State<ButtonsFrame> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,10 +33,10 @@ class ButtonsFrame extends StatelessWidget {
           100,
           (index) => CustomButton(
             index: '$index',
-            thisColor: thisColor,
-            thatColor: thatColor,
+            thisColor: widget.thisColor,
+            thatColor: widget.thatColor,
           ),
-        ),
+        )..shuffle(),
       ),
     );
   }
