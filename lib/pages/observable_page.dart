@@ -1,30 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:observer_pattern/logic/observable_interface.dart';
 import 'package:observer_pattern/pages/object_page.dart';
 
-class ObservablePage extends StatefulWidget implements Observable{
+class ObservablePage extends StatefulWidget{
   const ObservablePage({Key key}) : super(key: key);
 
   @override
   _ObservablePageState createState() => _ObservablePageState();
 
-  @override
-  notifyObserver() {
-    // TODO: implement notifyObserver
-    // throw UnimplementedError();
-  }
-
-  @override
-  registerObserver() {
-    // TODO: implement registerObserver
-    // throw UnimplementedError();
-  }
-
-  @override
-  removeObserver() {
-    // TODO: implement removeObserver
-    // throw UnimplementedError();
-  }
 }
 
 class _ObservablePageState extends State<ObservablePage> {

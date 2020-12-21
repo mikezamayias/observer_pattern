@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:observer_pattern/pages/object_page.dart';
 import 'package:observer_pattern/pages/observable_page.dart';
 import 'package:observer_pattern/pages/observer_page.dart';
 
