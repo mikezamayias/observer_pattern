@@ -28,6 +28,9 @@ class _HomePageState extends State<HomePage> {
               fit: FlexFit.loose,
               child: ObservablePage(),
             ),
+            SizedBox(
+              width: 5,
+            ),
             Flexible(
               fit: FlexFit.loose,
               child: ObserverPage(),
